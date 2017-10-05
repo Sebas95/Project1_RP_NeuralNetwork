@@ -12,13 +12,13 @@ function y=predict(W1,W2,X)
   # W1: weights matrix between input and hidden layer
   # W2: weights matrix between the hidden and the output layer
   # X:  Input vector, extended at its end with a 1
-    
   
- X1 = [ ones(rows(X),1)  X(:,1)  X(:,2)];
- 
- arg1 = sigmoid( W1*X1'  );
- 
- y = sigmoid( W2 * [ ones(1,columns(arg1)) ; arg1] );
+  #display([1 ;X']);
+  #display(W1);
+  arg1 = sigmoid( [  W1*  [1 ;X']]  );
+ # display(arg1);
+
+  y = sigmoid( W2 * [1 ; arg1] );
 endfunction;
 
  function g=sigmoid(z)
