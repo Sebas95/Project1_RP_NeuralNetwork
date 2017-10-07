@@ -1,0 +1,5 @@
+Scikit-Learn:
+sudo apt install python-pip
+pip install -U scikit-learn
+
+

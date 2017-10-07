@@ -12,11 +12,12 @@ function [gW1,gW2]=gradtarget(W1,W2,X,Y)
  yk = predict(W1,W2,X)';
  dk = yk - Y;    
  xi = [ 1  X];
- zj_aux = sigmoid( W1*xi');
- zj =  [ ones(1,columns(zj_aux)) ; zj_aux];
- dj = (zj.*(1.-zj) )' .*  (dk*W2) ; 
- gW1 =  [ zj_aux  zj_aux  zj_aux ] .* [dk ; dk ; dk ; dk ; dk  ];
- gW2 =  [xi ; xi ; xi ; xi ; xi ; xi  ]'.*[dj; dj; dj];
+ zj = sigmoid( W1*xi');
+ zj_bias =  [ ones(1,columns(zj)) ; zj];
+ dj = (zj_bias.*(1.-zj_bias) )' .*  (dk*W2) ; 
+ 
+ gW1 =  [ zj  zj  zj ] .* [dk ; dk ; dk ; dk ; dk; dk ; dk ; dk ; dk ; dk ];
+ gW2 =  [xi ; xi ; xi ; xi ; xi ; xi ; xi ; xi ; xi  ; xi ; xi  ]'.*[dj; dj; dj];
 
 endfunction;
 
