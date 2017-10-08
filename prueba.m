@@ -1,7 +1,7 @@
  
  pkg load optim;
  
- [X,Y]=create_data(10000,numClasses=3,shape="horizontal");
+ [X,Y]=create_data(100000,numClasses=3,shape="vertical");
  
  #X1 horizontal
  #X2 vertical

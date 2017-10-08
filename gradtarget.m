@@ -9,9 +9,9 @@ function [gW1,gW2]=gradtarget(W1,W2,X,Y)
   # X:  training set holding on the rows the input data, plus a final column 
   #     equal to 1
   # Y:  labels of the training set
- yk = predict(W1,W2,X)';
- dk = yk - Y;    
  xi = [ 1  X];
+ yk = predict(W1,W2,xi)';
+ dk = yk - Y;    
  zj = sigmoid( W1*xi');
  zj_bias =  [ ones(1,columns(zj)) ; zj];
  dj = (zj_bias.*(1.-zj_bias) )' .*  (dk*W2) ;
