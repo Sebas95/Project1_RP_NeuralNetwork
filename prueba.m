@@ -1,12 +1,15 @@
  
  pkg load optim;
  
- [X,Y]=create_data(100000,numClasses=3,shape="horizontal");
+ [X,Y]=create_data(10000,numClasses=3,shape="horizontal");
+ 
+ #X1 horizontal
+ #X2 vertical
 
- #plot_data(X,Y);
+ plot_data(X,Y);
  
  NumInputs = 3;
- neuronsHidden = 10; 
+ neuronsHidden = 5; 
  outputs = 3;
  
  W1 = rand(neuronsHidden,NumInputs)-rand(neuronsHidden,NumInputs);
@@ -22,8 +25,6 @@
     W2 = W2 - lamda.*gW2;
   endfor
 
- #X=X(1,:);
- #Y=Y(1);
- #--------
+
  
  
