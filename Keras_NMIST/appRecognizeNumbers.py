@@ -5,6 +5,7 @@ console
 '''
 
 import h5py
+import sys
 import numpy
 import matplotlib.pyplot as plt
 import cv2
@@ -14,10 +15,12 @@ from keras.datasets import mnist
 
 #--------------------------TRy to put an image
 #(X_train, y_train), (X_test, y_test) = mnist.load_data()
+nameOfFile =sys.argv[1]
+print(nameOfFile)
 #Load de presaved model
 model = load_model('my_model.h5')
 #Load an image two predict it
-test = cv2.imread('six28.png')
+test = cv2.imread(nameOfFile)
 #Treat it a little two improved classification
 test = cv2.cvtColor( test, cv2.COLOR_RGB2GRAY)
 test = test.reshape(1, 1, 28, 28)
