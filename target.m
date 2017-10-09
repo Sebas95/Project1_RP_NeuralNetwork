@@ -11,7 +11,14 @@ function y=target(W1,W2,X,Y)
   # X:  training set holding on the rows the input data, plus a final column 
   #     equal to 1
   # Y:  labels of the training set
-    
-  # PONGA SU CODIGO AQUÍ
-  
+
+
+  y = [0,0,0];
+  for i = [1:rows(X)]
+    yPredict=predict(W1,W2,[1,X(i,:)]);
+    ySubstract = (yPredict' - Y(i,:)).^2; 
+    y = y + ySubstract;
+  endfor
+  y = y / 2;
+
 endfunction;
