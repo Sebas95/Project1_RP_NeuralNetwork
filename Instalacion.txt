@@ -5,3 +5,11 @@ pip install -U scikit-learn
 KEras:
 sudo pip install tensorflow
 sudo pip install keras
+
+Para cargar imagenes
+
+sudo apt-get install python-matplotlib python-numpy python-pil python-scipy
+
+sudo apt-get install build-essential cython
+
+sudo apt-get install python-skimage
