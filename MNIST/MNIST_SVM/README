@@ -1,0 +1,42 @@
+
+#------------------------------------Sobre el uso del archivo
+
+Todos los comandos presentes en este archivo deben ser ejecutados luego de
+haber instalado todo lo necesario descrito en el archivo de instalacion.
+
+
+#-------------------------------------Para construir el modelo con support vector machine
+
+Se debe ejecutar el siguiente comando en la carpeta correspondiente donde
+se encuentre dicho archivo (Dentro de la carpeta MNIST/MNIST_SVM
+
+	$ python digits_classification.py 
+
+Este archivo genera el modelo y lo guarda en un archivo llamado model.pkl
+
+
+#-------------------------------------App para reconocer imagenes
+
+Seguidamente, para predecir dígitos a partir de cualquier imagen dada por el usuario de 28x28
+pixeles.En MNIST/MNIST_SVM se ejecuta el siguiente comando:
+
+	$ python appPredictions.py <nombreDeLaImagen.png>
+
+Ya en la carpeta vienen ciertas imagenes de prueba, por ejemplo para clasificar
+la imagen llamada six28.png se ejecutaria el siguiente comando
+
+	$ python appPredictions.py zero28.png
+
+#-------------------------------------Confusion matrix
+
+El archivo carga el modelo previamente guardado de la red neuronal
+
+Para ejecutar la prueba de la matriz de confusion simplemente se debe
+
+ejecutar el siguiente comando:
+
+	$ python modelConfusionMatrix.py 
+
+Este construye la matriz de confusión con todos los datos de prueba
+de la base de datos y brinda la métrica 'accuracy_score'
+
