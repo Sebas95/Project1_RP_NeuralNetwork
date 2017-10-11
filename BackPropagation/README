@@ -1,0 +1,14 @@
+
+Primero se debe ejecutar en la terminal:
+
+	$octave-cli
+
+Ya en la interfaz de línea de comando se debe ejecutar
+	> trainGradientDescent
+
+Este imprimirá los valores resultantes de los pesos, en formato matriz
+Para predecir algún punto manualmente se debe introducir, por ejemplo:
+
+	> predict(W1,W2,[1 0.5 -0.2])
+
+

@@ -14,8 +14,7 @@
  
  W1 = rand(neuronsHidden,NumInputs)-rand(neuronsHidden,NumInputs);
  W2 = rand(outputs,neuronsHidden+1)-rand(outputs,neuronsHidden+1);
- display(W1);
- display(W2);
+
  lamda = 0.2;
   for i=[1:rows(X)] 
     
@@ -25,6 +24,8 @@
     W2 = W2 - lamda.*gW2;
   endfor
 
+ display(W1);
+ display(W2);
 
  
  
