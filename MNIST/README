@@ -1,0 +1,30 @@
+Para la ejecucion de la clasificacion de imagenes usando Keras de la red
+neuronal profunda se debe tener instalados ciertos paquetes para lograr su
+compilacion y/o su ejecucion.
+
+Se debe tener Instalado Keras y el TensorFlow backend
+
+Se debe instalar adicionalmente con los siguientes comandos:
+
+sudo apt-get install python-matplotlib python-numpy python-pil python-scipy
+
+sudo apt-get install build-essential cython
+
+sudo apt-get install python-skimage
+
+--------------------Para h5py
+
+sudo -H pip install h5py
+
+---------------------Para OpenCv
+
+cd $HOME
+mkdir opencv_src
+cd opencv_src/
+git clone https://github.com/Itseez/opencv.git
+cd opencv/
+mkdir release
+cd release/
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
+make -j 4
+sudo make install -j 4
