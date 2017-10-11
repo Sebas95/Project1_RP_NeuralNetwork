@@ -8,7 +8,7 @@ haber instalado todo lo necesario descrito en el archivo de instalacion.
 #-------------------------------------Para construir la red neuronal deep
 
 Se debe ejecutar el siguiente comando en la carpeta correspondiente donde
-se encuentre dicho archivo (Dentro de la carpeta MNIST/NeuronalNetwork
+se encuentre dicho archivo (Dentro de la carpeta MNIST/Deep Neuronal
 
 python deepMnistModel.py
 
@@ -18,7 +18,7 @@ Este archivo genera el modelo y lo guarda en un archivo llamado my_model.h5
 #-------------------------------------App para reconocer imagenes
 
 Seguidamente para correr unicamente el ejemplo de la aplicacion en la carpeta
-MNIST/NeuronalNetwork se ejecuta el siguiente comando
+MNIST/Deep Neuronal se ejecuta el siguiente comando
 
 python appRecognizeNumbers.py <nombreDeLaImagen.png>
 
