@@ -2,7 +2,8 @@ Scikit-Learn:
 sudo apt install python-pip
 pip install -U scikit-learn
 
-Keras:
+---------------------------------Keras-----------------------------------------
+--------------------------------Instalacion
 sudo pip install tensorflow
 sudo pip install keras
 

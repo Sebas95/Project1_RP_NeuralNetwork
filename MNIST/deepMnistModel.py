@@ -33,9 +33,6 @@ y_test = np_utils.to_categorical(y_test)
 num_classes = y_test.shape[1]
 
 
-
-
-
 # define the larger model
 def larger_model():
 	# create model

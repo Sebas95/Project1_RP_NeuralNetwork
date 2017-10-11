@@ -26,6 +26,7 @@ test = cv2.cvtColor( test, cv2.COLOR_RGB2GRAY)
 test = test.reshape(1, 1, 28, 28)
 test = cv2.bitwise_not(test)
 #Predict the model class
-pred = model.predict_classes(test)
+pred = model.predict_classes(X_train[0:100])
+#pred = model.predict_classes(test)
 #Print the class predicted
 print(pred)
