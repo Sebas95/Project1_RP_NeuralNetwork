@@ -29,17 +29,10 @@ test = cv2.cvtColor( test, cv2.COLOR_RGB2GRAY)
 test = test.reshape(1, 1, 28, 28)
 test = cv2.bitwise_not(test)
 
-array = []
-A= test[0][0]
 
-for i in range(len(A)):
-    for j in range(len(A[0])):
-        array.append(A[i][j]) 
-
-print(array)
 
 #Predict the model class
-predicted = clf.predict_classes(test)
+predicted = clf.predict(test)
 #Print the class predicted
 print(predicted)
 

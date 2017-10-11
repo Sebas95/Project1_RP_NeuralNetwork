@@ -18,7 +18,7 @@ function y=predict(W1,W2,X)
   arg1 = sigmoid( [  W1*  [X']]  );
  # display(arg1);
 
-  y = sigmoid( W2 * [1 ; arg1] );
+  y = sigmoid( W2 * [ones(1,columns(arg1)); arg1]);
 endfunction;
 
  function g=sigmoid(z)
