@@ -39,8 +39,7 @@ for i in range(len(A)):
 print(array)
 
 #Predict the model class
-#predicted = clf.predict(data['test']['X'])
-predicted = clf.predict(test[0])
+predicted = clf.predict_classes(test)
 #Print the class predicted
 print(predicted)
 
