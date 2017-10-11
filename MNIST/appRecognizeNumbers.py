@@ -28,4 +28,8 @@ test = cv2.bitwise_not(test)
 #Predict the model class
 pred = model.predict_classes(test)
 #Print the class predicted
-print(pred)
+print "------------------------------------"
+print "-------------Result-----------------"
+print "------------------------------------"
+print "The number in the image is: ",pred[0]
+#print(pred[0])
