@@ -35,7 +35,7 @@ Para ejecutar la prueba de la matriz de confusion simplemente se debe
 
 ejecutar el siguiente comando:
 
-	$ python modelConfusionMatrix.py 
+	$ python modelMetrics.py 
 
 Este construye la matriz de confusión con todos los datos de prueba
 de la base de datos y brinda la métrica 'accuracy_score'
