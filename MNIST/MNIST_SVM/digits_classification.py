@@ -23,6 +23,7 @@ def main():
 
     # take all of it - make that number lower for experiments
     examples = len(data['train']['X'])
+    
     clf.fit(data['train']['X'][:examples], data['train']['y'][:examples])
     joblib.dump(clf, 'model.pkl') 
     
