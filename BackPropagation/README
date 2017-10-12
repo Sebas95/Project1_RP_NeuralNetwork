@@ -9,8 +9,8 @@ en el parámetro shape se debe indicar el tipo de distribución a entrenar, los 
 Ya en la interfaz de línea de comando se debe ejecutar
 	> trainGradientDescent
 
-Este imprimirá los valores resultantes de los pesos, en formato matriz. También escribirá los datos que se 
-utilizaron para el entrenamiento en un archivo tipo mat (Matriz matlab) que posteriormente se utilizarán 
+Este imprimirá los valores resultantes de los pesos, en formato matriz. También escribirá los datos que se
+utilizaron para el entrenamiento en un archivo tipo mat (Matriz matlab) que posteriormente se utilizarán
 para realizar el entrenamiento con el SVM de Scikit.
 
 Para predecir algún punto manualmente se debe introducir, por ejemplo:
@@ -26,9 +26,9 @@ Donde:
 		Wn: pesos de las capas de la red entrenada (se obtienen después de correr > trainGradientDescent )
 		dist: distribución de los datos que se utilizaron para el entrenamiento("horizontal",
 		"vertical", "pie", "radial")
-También escribirá los datos de prueba en un archivo mat (matriz matlab) que posteriormente se utilizarán 
+También escribirá los datos de prueba en un archivo mat (matriz matlab) que posteriormente se utilizarán
 para realizar las pruebas con el SVM de Scikit.
-El resultado será una matriz de 3x5. La columna 4 representa la sensitividad, y la columna 5, la precisión,de cada clase respectivamente. 
+El resultado será una matriz de 3x5. La columna 4 representa la sensitividad, y la columna 5, la precisión,de cada clase respectivamente.
 
 Visualización de resultados de clasificación
 Para visualizar los resultados de la clasificación en formato de imagen jpg, se debe llamar a la función
@@ -39,5 +39,10 @@ Donde:
 		X: entradas utilizadas para el entrenamiento
 		Y: etiquetas de clasificación utilizadas para el entrenamiento
 Esta función muestra en pantalla una imagen jpg de 512x512 pixeles con el resultado de la clasificación de cada
-punto de dicha imagen y le sobrepone los puntos de entrenamiento para mostrar que la clasificación se hizo de 
+punto de dicha imagen y le sobrepone los puntos de entrenamiento para mostrar que la clasificación se hizo de
 manera satisfactoria. Además, guarda la imagen en el directorio de trabajo con el nombre "output.jpg".
+
+
+Funcion target
+Para visualizar a suma de error de los cuadrados se ejecuta en terminal el archivo pruebaTarget
+  >pruebaTarget
