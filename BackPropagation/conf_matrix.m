@@ -25,6 +25,9 @@
 function ret = conf_matrix (W1, W2, dist)
     #conjunto de prueba
     [X,Yreal]=create_data(1000,numClasses=3,shape=dist);
+    #guardar conjunto de prueba
+    save -6 "xtest_set.mat" X;
+    save -6 "ytest_set.mat" Yreal;
     
     #datos predecidos
     Ypred= predict(W1, W2, [ones(rows(X), 1), X]);
