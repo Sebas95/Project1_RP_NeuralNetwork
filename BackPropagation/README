@@ -25,6 +25,7 @@ Donde:
 		"vertical", "pie", "radial")
 También escribirá los datos de prueba en un archivo mat (matriz matlab) que posteriormente se utilizarán 
 para realizar las pruebas con el SVM de Scikit.
+El resultado será una matriz de 3x5. La columna 4 representa la sensitividad, y la columna 5, la precisión,de cada clase respectivamente. 
 
 Visualización de resultados de clasificación
 Para visualizar los resultados de la clasificación en formato de imagen jpg, se debe llamar a la función
