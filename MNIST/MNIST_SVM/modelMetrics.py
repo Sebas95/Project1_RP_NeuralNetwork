@@ -37,11 +37,10 @@ def analyze(clf, data):
     # Get confusion matrix
     from sklearn import metrics
     predicted = clf.predict(data['test']['X'])
-    print("Confusion matrix:\n%s" %
-          metrics.confusion_matrix(data['test']['y'],
-                                   predicted))
+    print("Confusion matrix:\n%s" % metrics.confusion_matrix(data['test']['y'],predicted))
     print("Accuracy: %0.4f" % metrics.accuracy_score(data['test']['y'], predicted))
-  
+    print "Classification report: "
+    print metrics.classification_report(data['test']['y'],predicted)
     
 
 data = get_data()

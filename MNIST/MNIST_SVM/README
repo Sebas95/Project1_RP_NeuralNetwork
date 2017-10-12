@@ -38,5 +38,6 @@ ejecutar el siguiente comando:
 	$ python modelMetrics.py 
 
 Este construye la matriz de confusión con todos los datos de prueba
-de la base de datos y brinda la métrica 'accuracy_score'
+de la base de datos, la métrica 'accuracy_score' y el
+'classification_report'
 
