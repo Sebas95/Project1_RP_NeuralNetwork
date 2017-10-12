@@ -2,6 +2,8 @@
  pkg load optim;
  
  [X,Y]=create_data(100000,numClasses=3,shape="vertical");
+ save -6 "xtrain_set.mat" X;
+ save -6 "ytrain_set.mat" Y;
  
  #X1 horizontal
  #X2 vertical
