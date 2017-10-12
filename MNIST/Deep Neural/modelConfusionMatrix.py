@@ -27,7 +27,17 @@ model = load_model('my_model.h5')
 #Print confusion_matrix
 print("The confussion matrix for the data test is")
 print "\n"
-(X_train, y_train), (X_test, y_test) = mnist.load_data()
+# Load the original dataset
+from sklearn.datasets import fetch_mldata
+from sklearn.utils import shuffle
+mnist = fetch_mldata('MNIST original')
+x = mnist.data
+y = mnist.target
+# Normalization: Scale data to [-1, 1] - This is of mayor importance!!!
+x = x/255.0*2 - 1
+x, y = shuffle(x, y, random_state=0)
+from sklearn.cross_validation import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.33, random_state=42)
 # reshape to be [samples][pixels][width][height]
 X_test = X_test.reshape(X_test.shape[0], 1, 28, 28).astype('float32')
 y_pred = model.predict_classes(X_test) # This will take a few seconds...
