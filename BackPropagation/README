@@ -3,6 +3,9 @@ Primero se debe ejecutar en la terminal:
 
 	$octave-cli
 
+En el archivo trainGradientDescent.m en la segunda línea '[X,Y]=create_data(100000,numClasses=3,shape="vertical")'
+en el parámetro shape se debe indicar el tipo de distribución a entrenar, los tipos son:
+ ("horizontal","vertical", "pie", "radial")
 Ya en la interfaz de línea de comando se debe ejecutar
 	> trainGradientDescent
 
