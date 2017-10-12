@@ -27,27 +27,9 @@ Xt = Xt['X']
 c_matrix = np.zeros((3, 3))
 Ypred = clf.predict(Xt)
 for j in range(0, Xt.shape[0]):
-	if (Ypred[j]==1):
-		if (Yaux[j]==1):
-			c_matrix[0][0]+=1 
-		elif (Yaux[j]==2):
-			c_matrix[1][0]+=1
-		elif (Yaux[j]==3):
-			c_matrix[2][0]+=1
-	elif (Ypred[j]==2):
-		if (Yaux[j]==1):
-			c_matrix[0][1]+=1
-		elif (Yaux[j]==2):
-			c_matrix[1][1]+=1
-		elif (Yaux[j]==3):
-			c_matrix[2][1]+=1
-	elif (Ypred[j]==3):
-		if (Yaux[j]==1):
-			c_matrix[0][2]+=1
-		elif (Yaux[j]==2):
-			c_matrix[1][2]+=1
-		elif (Yaux[j]==3):
-			c_matrix[2][2]+=1
+		ind1= int(Yaux[j]-1)
+		ind2= int(Ypred[j]-1)
+		c_matrix[ind1][ind2]+=1 
 
 print "using: %d data for training" %Y.shape[0]
 print "using: %d data for testing" %Xt.shape[0]
