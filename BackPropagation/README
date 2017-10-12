@@ -20,7 +20,7 @@ Para visualizar la matriz de confusión (utilizando 1000 datos de prueba) se deb
  		> conf_matrix(W1, W2, dist)
 
 Donde:
-		Wn: pesos de las capas de la red entrenada
+		Wn: pesos de las capas de la red entrenada (se obtienen después de correr > trainGradientDescent )
 		dist: distribución de los datos que se utilizaron para el entrenamiento("horizontal",
 		"vertical", "pie", "radial")
 También escribirá los datos de prueba en un archivo mat (matriz matlab) que posteriormente se utilizarán 
