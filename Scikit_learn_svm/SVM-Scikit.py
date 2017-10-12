@@ -4,8 +4,8 @@ from sklearn import svm
 import scipy.io as sio
 
 #Entrenamiento de la red
-X = io.loadmat('xtrain_set.mat')
-Y = io.loadmat('ytrain_set.mat')
+X = io.loadmat('../BackPropagation/xtrain_set.mat')
+Y = io.loadmat('../BackPropagation/ytrain_set.mat')
 X = X['X']
 Y = Y['Y']
 Yaux=  np.zeros((Y.shape[0], 1))
@@ -22,10 +22,22 @@ clf = svm.SVC(gamma=0.0001, C=100, kernel=k_type)
 clf.fit(X, Yaux.ravel())  
 
 #prediccion de la red
-Xt = io.loadmat('xtest_set.mat')
+Xt = io.loadmat('../BackPropagation/xtest_set.mat')
 Xt = Xt['X']
+Yt = io.loadmat('../BackPropagation/ytest_set.mat')
+Yt = Yt['Yreal']
+Yaux=  np.zeros((Yt.shape[0], 1))
+for i in range(0, Yt.shape[0]):
+	if (Yt[i][0]==1):
+		Yaux[i]=1
+	elif (Yt[i][1]==1):
+		Yaux[i]=2
+	elif (Yt[i][2]==1):
+		Yaux[i]=3
+
 c_matrix = np.zeros((3, 3))
 Ypred = clf.predict(Xt)
+
 for j in range(0, Xt.shape[0]):
 		ind1= int(Yaux[j]-1)
 		ind2= int(Ypred[j]-1)
