@@ -1,0 +1,29 @@
+Para ejecutar el código se debe contar con una versión de python >= 2.7
+Las siguientes bibliotecas de python deben estar instaladas:
+    -scipy
+    -numpy
+    -scikit learn
+
+para ejecutar el código, desde una terminal de linux, ejecute
+          $python SVM-Scikit.py
+ 
+A continuación se muestra un ejemplo de salida del programa 
+      using: 10000 data for training
+      using: 1000 data for testing
+      kernel_type: rbf
+      confusion matrix:
+      [[ 343.    0.    0.]
+       [   1.  314.    1.]
+       [   0.    1.  340.]]
+      sensitivity 1: 100%
+      sensitivity 2: 99%
+      sensitivity 3: 100%
+      precision 1: 100%
+      precision 2: 100%
+      precision 3: 100%
+      
+ 
+ IMPORTANTE:
+ El programa requiere datos de entrenamiento y de prueba que se generan en octave al ejecutar las funciones
+ conf_matrix (crea el archivo con los datos de prueba) y trainGradientDescent (crea el archivo con los datos
+ de entrenamiento). Ambas funciones se deben ejecutar antes de correr el código. 
