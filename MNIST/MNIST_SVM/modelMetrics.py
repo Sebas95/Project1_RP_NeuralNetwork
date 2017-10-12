@@ -41,8 +41,7 @@ def analyze(clf, data):
           metrics.confusion_matrix(data['test']['y'],
                                    predicted))
     print("Accuracy: %0.4f" % metrics.accuracy_score(data['test']['y'], predicted))
-    print("Precision score: %0.4f" % metrics.precision_score(data['test']['y'], predicted))
-    print("Precision score: %0.4f" % metrics.classification_report(data['test']['y'], predicted))
+  
     
 
 data = get_data()
