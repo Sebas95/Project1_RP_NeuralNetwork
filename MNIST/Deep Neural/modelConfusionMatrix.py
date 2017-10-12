@@ -15,21 +15,13 @@ from keras.models import load_model
 from scipy.misc import imread
 from keras.datasets import mnist
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score
 from keras.utils import np_utils
+from sklearn.metrics import classification_report
 
 #--------------------Confusion_matrix
 
 model = load_model('my_model.h5')
-
-#List of all values for the test
-namesList = ["six28.png","two28.png","sev28.png","zero28.png","zero228.png","sev228.png","three28.png","five28.png", "four28.png","nine28.png","zero328.png","eigth28.png"]
-
-true = [8,0,9,4,5,3,7,0,0,7,2,6];
-'''
-#false = [0,4,5,6]
-#print confusion_matrix(true,false);
-'''
-
 
 #For to get all image in the list of  names for image test
 
@@ -48,14 +40,16 @@ for value in namesList:
 
 # reshape to be [samples][pixels][width][height]
 arrayImages = arrayImages.reshape(len(true),1,28,28).astype('float32')
+arrayImages.reshape(len(true),1,28,28).astype('float32')
 
-#print arrayImages
-print "\n"
-print "The predicted values are: "
-print model.predict_classes(arrayImages).tolist()
-print "The true values are"
-print true
 #Print confusion_matrix
 print("The confussion matrix for the data test is")
 print "\n"
-print confusion_matrix(true,model.predict_classes(arrayImages))
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+X_test = X_test.reshape(X_test.shape[0], 1, 28, 28).astype('float32')
+y_pred = model.predict_classes(X_test) # This will take a few seconds...
+y_true = np_utils.to_categorical(y_test)
+print confusion_matrix(y_test,y_pred)
+print "Accuracy: ", accuracy_score(y_test,y_pred)
+print "Classification report: "
+print classification_report(y_test,y_pred)
